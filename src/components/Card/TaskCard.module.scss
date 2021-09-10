@@ -1,0 +1,66 @@
+.cardContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  //max-width: 300px;
+  width: 24%;
+  @media (max-width: 1360px ){
+    width: 32%;
+  }
+  @media (max-width: 900px ){
+    width: 48%;
+  }
+  @media (max-width: 620px ){
+    width: 98%;
+  }
+
+  box-shadow: 1px 1px 4px -1px rgba(34, 60, 80, 0.35);
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.cardNameStatusContainer{
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name{
+  max-width: 150px;
+  white-space: nowrap;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status{
+  padding: 4px 8px;
+  font-weight: bold;
+  color: #324299;
+  display: flex;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color:#DEE9FD;
+}
+
+.cardCatDateContainer{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category{
+  color: slategray;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.date{
+  color: slategray;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

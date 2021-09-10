@@ -1,0 +1,30 @@
+.inputContainer{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  min-width: 200px;
+  width: 100%;
+}
+
+.label{
+  font-weight: bold;
+}
+
+.input{
+  padding: 0 5px;
+  margin-top: 5px;
+  border: 2px solid lightgray;
+  height: 38px;
+  border-radius: 8px;
+  width: 100%;
+  &:focus{
+    outline: none;
+    &:hover{
+      border: 2px solid #4B49DE;
+    }
+  }
+  &:hover{
+    border: 2px solid darken(lightgray,10%);
+    transition: 200ms;
+  }
+}

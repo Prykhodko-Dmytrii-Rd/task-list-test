@@ -1,0 +1,18 @@
+
+.title {
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+.cardContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.messages {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 32px;
+}

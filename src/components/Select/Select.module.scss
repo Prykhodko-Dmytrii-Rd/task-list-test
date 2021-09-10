@@ -1,0 +1,12 @@
+.selectContainer {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+  min-width: 200px;
+}
+
+.label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
