@@ -8,10 +8,10 @@ class TaskRepository {
         const {dateFrom, dateTo, name, status} = filter
         const result = await new Promise(resolve => setTimeout(()=>{
             let res: ITask[] = data
-            if (name!=="") res = res.filter(el => el.name === name)
+            if (name!=="") res = res.filter(el => el.name.match(name))
             if (status!=="") res = res.filter(el => el.status === status)
-            if (dateTo!=="") res = res.filter(el => el.dateTo === dateTo)
-            if (dateFrom!=="") res = res.filter(el => el.dateFrom === dateFrom)
+            if (dateTo!=="") res = res.filter(el => (new Date(el.dateTo).getTime() - new Date(dateTo).getTime()) < 0)
+            if (dateFrom!=="") res = res.filter(el => (new Date(el.dateFrom).getTime() - new Date(dateFrom).getTime()) > 0)
             resolve(res)
         },1000))
         return result

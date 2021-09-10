@@ -40,16 +40,6 @@ const styling = {
         padding: '8px 0',
         marginTop:'-15px'
     }),
-    // option: (provided, state) => ({
-    //     ...provided,
-    //     padding: '15px 16px',
-    //     fontSize: '16px',
-    //     backgroundColor: state.isSelected ? colors.pressedBlueColor : colors.mainWhite,
-    //
-    //     '&:hover': {
-    //         backgroundColor: state.isSelected ? colors.pressedBlueColor : colors.hoverBlueColor
-    //     }
-    // }),
     indicatorsContainer: (provided:any) => ({
         ...provided,
         height: '35px'

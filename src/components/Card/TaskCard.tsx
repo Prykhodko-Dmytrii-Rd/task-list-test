@@ -10,7 +10,7 @@ interface CardProps {
 const TaskCard = ({card}: CardProps) => {
     const dateTo = new Date(card.dateTo)
     const now = new Date()
-    const alarm = (now.getTime() - dateTo.getTime()) > 0
+    const expired = (now.getTime() - dateTo.getTime()) > 0
     return (
         <div className={styles.cardContainer}>
             <div className={styles.cardNameStatusContainer}>
@@ -19,7 +19,7 @@ const TaskCard = ({card}: CardProps) => {
             </div>
             <div className={styles.cardCatDateContainer}>
                 <div className={styles.category}><BsPeople/> {card.category}</div>
-                <div className={styles.date}><BsClock color={ alarm ? "red" : "green"}/> {date.format(dateTo,'MMM DD, YYYY')}</div>
+                <div className={styles.date}><BsClock color={ expired ? "red" : "green"}/> {date.format(dateTo,'MMM DD, YYYY')}</div>
             </div>
         </div>
     );
